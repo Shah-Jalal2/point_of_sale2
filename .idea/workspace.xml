@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1kmqTU3muPOQM1FWPCl41JIua2i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php_project\research\POS2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php_project\research\POS2\dist\js\pages" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="" />
+      <created>1606316121878</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606316121878</updated>
+      <workItem from="1606316129491" duration="14462000" />
+      <workItem from="1606366472062" duration="164000" />
+      <workItem from="1606366639350" duration="5356000" />
+      <workItem from="1606411416676" duration="7744000" />
+      <workItem from="1606453939654" duration="4636000" />
+      <workItem from="1606465890234" duration="449000" />
+      <workItem from="1606487438584" duration="7903000" />
+      <workItem from="1606500150158" duration="2005000" />
+      <workItem from="1606549962540" duration="675000" />
+      <workItem from="1606567920527" duration="15366000" />
+      <workItem from="1606622165651" duration="10363000" />
+      <workItem from="1606636083947" duration="633000" />
+      <workItem from="1606637009998" duration="187000" />
+      <workItem from="1606637548424" duration="1207000" />
+      <workItem from="1606639289200" duration="650000" />
+      <workItem from="1606639957684" duration="144000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1506" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606500080079">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1506" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606500080079" />
+    <state x="-1197" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606588823102">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1197" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606588823102" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1606366634419">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606366634419" />
+    <state x="0" y="0" width="1294" height="737" key="dock-window-1" timestamp="1606637196838">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="1294" height="737" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606637196838" />
+  </component>
+</project>
