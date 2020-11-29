@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="" />
+    <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/users.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/users.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +15,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kmqTU3muPOQM1FWPCl41JIua2i" />
   <component name="ProjectViewState">
@@ -59,6 +68,8 @@
       <workItem from="1606637548424" duration="1207000" />
       <workItem from="1606639289200" duration="650000" />
       <workItem from="1606639957684" duration="144000" />
+      <workItem from="1606640940696" duration="2392000" />
+      <workItem from="1606666972948" duration="8890000" />
     </task>
     <servers />
   </component>
@@ -82,5 +93,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="1294" height="737" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606637196838" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/dist/js/users.js</url>
+          <line>50</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

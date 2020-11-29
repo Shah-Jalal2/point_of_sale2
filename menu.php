@@ -37,7 +37,7 @@
             </li>
 
             <li class="nav-item has-treeview">
-                <a href="users.php" class="nav-link">
+                <a href="users.php" class="nav-link" >
                     <i class="fas fa-user nav-icon"></i>
                     <p>
                         Users
