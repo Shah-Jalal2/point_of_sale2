@@ -72,12 +72,17 @@ include "header.php";
                         $query = "SELECT * FROM users";
                         $result = mysqli_query($conn, $query);
 
+                        $count = 0;
+
 
                         while ($row = mysqli_fetch_assoc($result)){
+
+                            $count++;
+
                             ?>
 
                             <tr>
-                                <td>1</td>
+                                <td><?= $count ?></td>
                                 <td><?= $row['name'] ?></td>
                                 <td><?= $row['user'] ?></td>
                                 <td><img src="<?= $row['picture'] ?>" alt="" style="width: 50px; height: 50px;"></td>

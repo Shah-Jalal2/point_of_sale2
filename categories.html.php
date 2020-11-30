@@ -51,24 +51,9 @@ include "header.php";
                         </thead>
 
                         <tbody>
-
-                        <?php
-
-                        include "connection.php";
-
-                        $query = "SELECT * FROM category";
-                        $result = mysqli_query($conn, $query);
-
-                        $count = 0;
-
-
-                        while ($row = mysqli_fetch_assoc($result)){
-                            $count++;
-                        ?>
-
                         <tr>
-                            <td><?= $count ?></td>
-                            <td><?= $row['category'] ?></td>
+                            <td>1</td>
+                            <td>ELECTROMECHANICAL EQUIPMENT</td>
                             <td>
 
                                 <div class="btn-group">
@@ -82,16 +67,6 @@ include "header.php";
 
                             </td>
                         </tr>
-
-
-                            <?php
-                        }
-
-                            ?>
-
-                        <?php
-                        include_once "controllers/addCategory.controller.php";
-                        ?>
 
                         </tbody>
 
