@@ -73,9 +73,10 @@ include "header.php";
 
                                 <div class="btn-group">
 
-                                    <button class="btn btn-warning"><i class="fa fa-pen"></i></button>
+                                    <button class="btn btn-warning" data-toggle="modal" data-target="#editCategoryModal-<?= $row['id'] ?>"><i class="fa fa-pen"></i></button>
 
-                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+<!--                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>-->
+                                    <a href="controllers/categoryDelete.controller.php?category_delete=<?= base64_encode($row['id']) ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete')"><i class="fa fa-times"></i></a>
 
 
                                 </div>
@@ -111,6 +112,9 @@ include "header.php";
 <!-- /.content-wrapper -->
 
 
+<!--====================================================================================================-->
+<!--                                        Modal Add Category              -->
+<!--==================================================================================================== -->
 
 <!-- Modal -->
 <!-- Modal -->
@@ -177,8 +181,101 @@ include "header.php";
 
 
 <!--====================================================================================================-->
-<!--                                        Modal Add User End             -->
+<!--                                        Modal Add Category End             -->
 <!--==================================================================================================== -->
+
+
+
+
+<!--====================================================================================================-->
+<!--                                        Modal Edit Category End             -->
+<!--==================================================================================================== -->
+
+
+<?php
+
+
+include "connection.php";
+
+
+
+$query = "SELECT * FROM category";
+$result = mysqli_query($conn, $query);
+
+
+while ($row = mysqli_fetch_assoc($result)){
+    $id = $row['id'];
+    $query = "SELECT * FROM category WHERE `id` = '$id'";
+    $category_info = mysqli_query($conn, $query);
+    $editCategoryInfo = mysqli_fetch_assoc($category_info);
+?>
+
+<!-- Modal -->
+<div id="editCategoryModal-<?= $row['id'] ?>" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+
+            <!--====================================================================================================-->
+            <!--                                        Modal Header            -->
+            <!--==================================================================================================== -->
+
+            <div class="modal-header" style="background: #3c8dbc; color: white;">
+
+                <h4 class="modal-title">Edit Category</h4>
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!--====================================================================================================-->
+            <!--                                        Modal Body          -->
+            <!--==================================================================================================== -->
+
+            <div class="modal-body">
+
+                <div class="box-body">
+                    <form action="" method="post" >
+
+                        <!--                    ENTRY FOR NAME-->
+
+                        <div class="form-group">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-th"></i></span>
+                                </div>
+                                <input type="text" class="form-control input-lg" name="newCategoryName"  required value="<?= $editCategoryInfo['category'] ?>">
+                                <input type="hidden" class="form-control" name="id"  value="<?= $editCategoryInfo['id'] ?>" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" name="editCategory">Save Category</button>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<?php
+}
+
+include_once "controllers/categoryUpdate.controller.php";
+
+?>
 
 
 

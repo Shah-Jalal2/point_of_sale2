@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/categories.html.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/addCategory.controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/categoryDelete.controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/categoryUpdate.controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/users.html.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
       <workItem from="1606640940696" duration="2392000" />
       <workItem from="1606666972948" duration="9762000" />
       <workItem from="1606710464505" duration="10720000" />
-      <workItem from="1606746842485" duration="6336000" />
+      <workItem from="1606746842485" duration="13484000" />
     </task>
     <servers />
   </component>
@@ -110,6 +112,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1205" y="346" key="#Notifications" timestamp="1606757083624">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1205" y="346" key="#Notifications/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606757083624" />
     <state x="-1506" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606500080079">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -130,5 +136,16 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="1294" height="737" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606637196838" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/users.php</url>
+          <line>434</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
