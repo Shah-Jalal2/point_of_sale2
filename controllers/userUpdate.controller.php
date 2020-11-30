@@ -15,7 +15,9 @@ if (isset($_POST['updatetUser'])) {
 
 
 
-    if (isset($_FILES["editPicture"]["tmp_name"])) {
+    $route = $_POST["currentPicture"];
+
+    if (isset($_FILES["editPicture"]["tmp_name"])  && !empty($_FILES["editPicture"]["tmp_name"])) {
         list($width, $height) = getimagesize($_FILES["editPicture"]["tmp_name"]);
 
         $newHeight = 500;

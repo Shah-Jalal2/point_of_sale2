@@ -87,12 +87,12 @@ include "header.php";
                                     <?php
                                         if($row['status'] == 1) {
                                             ?>
-                                            <button class="btn btn-success btn-xs">Activated</button>
+                                            <a href="controllers/status_inactive.controller.php?id=<?= base64_encode($row['id']) ?>" class="btn btn-primary btn-xs">Active</a>
                                             <?php
                                         }
                                         else{
                                             ?>
-                                            <button class="btn btn-danger btn-xs">Deactivated</button>
+                                            <a href="controllers/status_active.controller.php?id=<?= base64_encode($row['id']) ?>" class="btn btn-danger btn-xs">Deactivate</a>
                                             <?php
                                         }
                                     ?>
@@ -424,8 +424,6 @@ while ($row = mysqli_fetch_assoc($result)){
 </div>
 
 <?php
-
-
 
 }
 

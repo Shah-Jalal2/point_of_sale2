@@ -23,24 +23,30 @@ if (isset($_POST['login'])) {
 
 //            if ($row['password'] == $password) {
             if (password_verify($password, $row['password'])) {       // Password decoding
-                $_SESSION['user'] = $user;
-                $_SESSION['name'] = $row['name'];
-                $_SESSION['id'] = $row['id'];
-                $_SESSION['profile'] = $row['profile'];
-                $_SESSION['picture'] = $row['picture'];
-                $_SESSION['beginSession'] = "ok";
 
-//                        echo '<script>
-//                             window.location = "start";
-//                         </script>';
+                if ($row['status'] == 1) {
 
-                header('location: home.php');
+                        $_SESSION['user'] = $user;
+                        $_SESSION['name'] = $row['name'];
+                        $_SESSION['id'] = $row['id'];
+                        $_SESSION['profile'] = $row['profile'];
+                        $_SESSION['picture'] = $row['picture'];
+                        $_SESSION['beginSession'] = "ok";
+
+//                          echo '<script>
+//                              window.location = "start";
+//                          </script>';
+
+                        header('location: home.php');
+                }  else {
+                    echo '<br><div class="alert alert-danger">User is Not Activated</div>';
+                }
             } else {
-                echo '<br><div class="alert alert-danger">Password Error</div>';
+                    echo '<br><div class="alert alert-danger">Password Error</div>';
             }
-        } else {
-            echo '<br><div class="alert alert-danger">User name Error</div>';
-        }
+            } else {
+                echo '<br><div class="alert alert-danger">User name Error</div>';
+            }
 
     }
 }

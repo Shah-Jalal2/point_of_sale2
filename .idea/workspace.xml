@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/userUpdate.controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/status_active.controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/status_inactive.controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/login.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/userUpdate.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userUpdate.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/396.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/831.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/986.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/991.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +95,7 @@
       <workItem from="1606639957684" duration="144000" />
       <workItem from="1606640940696" duration="2392000" />
       <workItem from="1606666972948" duration="9762000" />
-      <workItem from="1606710464505" duration="3002000" />
+      <workItem from="1606710464505" duration="7454000" />
     </task>
     <servers />
   </component>
@@ -122,16 +130,5 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="1294" height="737" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606637196838" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/dist/js/users.js</url>
-          <line>50</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
