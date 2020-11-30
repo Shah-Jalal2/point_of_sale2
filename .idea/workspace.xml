@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/users.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +66,8 @@
       <workItem from="1606639289200" duration="650000" />
       <workItem from="1606639957684" duration="144000" />
       <workItem from="1606640940696" duration="2392000" />
-      <workItem from="1606666972948" duration="8890000" />
+      <workItem from="1606666972948" duration="9762000" />
+      <workItem from="1606710464505" duration="321000" />
     </task>
     <servers />
   </component>
@@ -100,7 +98,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/dist/js/users.js</url>
           <line>50</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
