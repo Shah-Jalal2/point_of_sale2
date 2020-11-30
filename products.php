@@ -102,8 +102,12 @@ include "header.php";
 
 
 
+<!--====================================================================================================-->
+<!--                                        Modal Add Products              -->
+<!--==================================================================================================== -->
 
-<!-- Modal -->
+
+
 <!-- Modal -->
 <div id="modalAddProduct" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -112,14 +116,13 @@ include "header.php";
         <div class="modal-content">
 
 
-
             <!--====================================================================================================-->
             <!--                                        Modal Header            -->
             <!--==================================================================================================== -->
 
             <div class="modal-header" style="background: #3c8dbc; color: white;">
 
-                <h4 class="modal-title">Add Product</h4>
+                <h4 class="modal-title">Add Products</h4>
 
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
@@ -131,128 +134,129 @@ include "header.php";
             <div class="modal-body">
 
                 <div class="box-body">
+                    <form action="" method="post" >
 
-                    <form role="form" method="post"enctype="multipart/form-data"></form>
+                        <!--                    ENTRY FOR CODE-->
 
-                    <!--                    ENTRY FOR CODE-->
-
-                    <div class="form-group">
-
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-code"></i></span>
-                            </div>
-                            <input type="text" class="form-control input-lg" name="newCode" placeholder="Add Code" required>
-                        </div>
-
-                    </div>
-
-                    <!--                    ENTRY FOR Descripton-->
-
-                    <div class="form-group">
-
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-product-hunt"></i></span>
-                            </div>
-                            <input type="text" class="form-control input-lg" name="newDescription" placeholder="Add Description" required>
-                        </div>
-
-                    </div>
-
-
-                    <!--                    Check category-->
-
-                    <div class="form-group">
-
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-th"></i></span>
-                            </div>
-                            <select class="form-control input-lg" name="newCategory">
-
-                                <option value="">Select Category</option>
-                                <option value="CONSTRUCTION EQUIPMENT">Adminastrator</option>
-                                <option value="Drill">Special</option>
-                                <option value="POWER GENERATORS">Seller</option>
-
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <!--                    INPUT FOR STOCK-->
-
-                    <div class="form-group">
-
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-check"></i></span>
-                            </div>
-                            <input type="number" class="form-control input-lg" name="newStock" min="0" placeholder="Stock" required>
-                        </div>
-
-                    </div>
-
-
-
-
-
-
-
-                    <!-- INPUT BUYING PRICE -->
-                    <div class="form-group row">
-
-                        <div class="col-xs-6">
+                        <div class="form-group">
 
                             <div class="input-group">
-
-                                <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span>
-
-                                <input type="number" class="form-control input-lg" name="newBuyingPrice" min="0" placeholder="Buying Price" required>
-
-                            </div>
-
-                        </div>
-
-                        <!-- INPUT SELLING PRICE -->
-                        <div class="col-xs-6">
-
-                            <div class="input-group">
-
-                                <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
-
-                                <input type="number" class="form-control input-lg" name="newSellingPrice" min="0" placeholder="Selling Price" required>
-
-                            </div>
-
-                            <br>
-
-                            <!-- CHECKBOX PERCENTAGE -->
-                            <div class="col-xs-6">
-
-                                <div class="form-group">
-
-                                    <label>
-
-                                        <input type="checkbox" class="minimal percentage" checked>
-
-                                        Use percentage
-
-                                    </label>
-
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-code"></i></span>
                                 </div>
-
+                                <input type="text" class="form-control input-lg" name="newCode" placeholder="Add Code" required>
                             </div>
 
-                            <!-- INPUT PERCENTAGE -->
-                            <div class="col-xs-6" style="padding:0">
+                        </div>
+
+                        <!--                    ENTRY FOR Descripton-->
+
+                        <div class="form-group">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-product-hunt"></i></span>
+                                </div>
+                                <input type="text" class="form-control input-lg" name="newDescription" placeholder="Add Description" required>
+                            </div>
+
+                        </div>
+
+
+                        <!--                    Check category-->
+
+                        <div class="form-group">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-th"></i></span>
+                                </div>
+                                <select class="form-control input-lg" name="newCategory">
+
+                                    <option value="">Select Category</option>
+                                    <option value="CONSTRUCTION EQUIPMENT">Adminastrator</option>
+                                    <option value="Drill">Special</option>
+                                    <option value="POWER GENERATORS">Seller</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!--                    INPUT FOR STOCK-->
+
+                        <div class="form-group">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-check"></i></span>
+                                </div>
+                                <input type="number" class="form-control input-lg" name="newStock" min="0" placeholder="Stock" required>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+                        <!-- INPUT BUYING PRICE -->
+                        <div class="form-group row">
+
+                            <div class="col-xs-6">
 
                                 <div class="input-group">
 
-                                    <input type="number" class="form-control input-lg newPercentage" min="0" value="40" required>
+                                    <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span>
 
-                                    <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                    <input type="number" class="form-control input-lg" name="newBuyingPrice" min="0" placeholder="Buying Price" required>
+
+                                </div>
+
+                            </div>
+
+                            <!-- INPUT SELLING PRICE -->
+                            <div class="col-xs-6">
+
+                                <div class="input-group">
+
+                                    <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
+
+                                    <input type="number" class="form-control input-lg" name="newSellingPrice" min="0" placeholder="Selling Price" required>
+
+                                </div>
+
+                                <br>
+
+                                <!-- CHECKBOX PERCENTAGE -->
+                                <div class="col-xs-6">
+
+                                    <div class="form-group">
+
+                                        <label>
+
+                                            <input type="checkbox" class="minimal percentage" checked>
+
+                                            Use percentage
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- INPUT PERCENTAGE -->
+                                <div class="col-xs-6" style="padding:0">
+
+                                    <div class="input-group">
+
+                                        <input type="number" class="form-control input-lg newPercentage" min="0" value="40" required>
+
+                                        <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+
+                                    </div>
 
                                 </div>
 
@@ -260,45 +264,32 @@ include "header.php";
 
                         </div>
 
-                    </div>
+                        <!--                    ENTRY FOR PICTURE-->
+
+                        <div class="form-group">
+
+                            <div class="panel">Upload Image</div>
+
+                            <input type="file" id="newProductImage " name="newProductImage">
+
+                            <p class="help-block">Maximum picture size 2MB </p>
+
+                            <img src="dist/img/user/avatar.png" class="img-thumbnail" width="100px">
+
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" name="saveProducts">Save Products</button>
+                        </div>
+
+                    </form>
 
 
-
-
-
-
-
-
-                    <!--                    ENTRY FOR PICTURE-->
-
-                    <div class="form-group">
-
-                        <div class="panel">Upload Image</div>
-
-                        <input type="file" id="newProductImage " name="newProductImage">
-
-                        <p class="help-block">Maximum picture size 2MB </p>
-
-                        <img src="dist/img/user/avatar.png" class="img-thumbnail" width="100px">
-
-                    </div>
 
                 </div>
 
             </div>
 
-            <!--====================================================================================================-->
-            <!--                                        Modal Footer            -->
-            <!--==================================================================================================== -->
-
-            <div class="modal-footer">
-
-                <!--                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-
-                <button type="submit" class="btn btn-primary float-right">Save Product</button>
-
-
-            </div>
 
         </div>
 
@@ -310,6 +301,14 @@ include "header.php";
 
 
 
+
+<!--====================================================================================================-->
+<!--                                        Modal Add User End             -->
+<!--==================================================================================================== -->
+
+
+
+
 <!--====================================================================================================-->
 <!--                                        Modal Add User End             -->
 <!--==================================================================================================== -->
@@ -317,9 +316,7 @@ include "header.php";
 
 
 
-<!--====================================================================================================-->
-<!--                                        Modal Add User End             -->
-<!--==================================================================================================== -->
+<!-- Modal -->
 
 
 
