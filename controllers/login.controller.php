@@ -33,6 +33,8 @@ if (isset($_POST['login'])) {
                         $_SESSION['picture'] = $row['picture'];
                         $_SESSION['beginSession'] = "ok";
 
+
+
 //                          echo '<script>
 //                              window.location = "start";
 //                          </script>';

@@ -20,15 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/status_active.controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/status_inactive.controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/login.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/userUpdate.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userUpdate.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/396.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/831.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/986.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/991.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/users.php" afterDir="false" />
     </list>
@@ -95,7 +88,7 @@
       <workItem from="1606639957684" duration="144000" />
       <workItem from="1606640940696" duration="2392000" />
       <workItem from="1606666972948" duration="9762000" />
-      <workItem from="1606710464505" duration="7454000" />
+      <workItem from="1606710464505" duration="10211000" />
     </task>
     <servers />
   </component>

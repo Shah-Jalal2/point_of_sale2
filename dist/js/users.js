@@ -51,15 +51,23 @@ $(".newPicture").change(function (){
 
 
 // <!--====================================================================================================-->
-//     <!--                                        Edit User          -->
+//     <!--                                        Delete User      -->
 // <!--==================================================================================================== -->
-//
-// $(".btnEditUser").click(function (){
-//
-//     var idUser = $(this).attr("idUser");
-//
-//     var data = new FormData();
-//     data.append("iduser", idUser);
-//
-//
-// })
+
+
+$(".btnDeleteUser").click(function () {
+    swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("Poof! Your imaginary file has been deleted!", {
+                    icon: "success",
+                });
+            }
+        });
+})

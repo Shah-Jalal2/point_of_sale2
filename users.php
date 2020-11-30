@@ -87,7 +87,7 @@ include "header.php";
                                     <?php
                                         if($row['status'] == 1) {
                                             ?>
-                                            <a href="controllers/status_inactive.controller.php?id=<?= base64_encode($row['id']) ?>" class="btn btn-primary btn-xs">Active</a>
+                                            <a href="controllers/status_inactive.controller.php?id=<?= base64_encode($row['id']) ?>" class="btn btn-primary btn-xs ">Active</a>
                                             <?php
                                         }
                                         else{
@@ -106,7 +106,7 @@ include "header.php";
 
                                         <button class="btn btn-warning btnEditUser" data-toggle="modal" data-target="#modalEditUser-<?= $row['id'] ?>"><i class="fa fa-pen"></i></button>
 
-                                        <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                        <button class="btn btn-danger btnDeleteUser"><i class="fa fa-times"></i></button>
 
 
                                     </div>
@@ -197,7 +197,8 @@ include "header.php";
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="text" class="form-control input-lg" name="newUser" placeholder="New User" required>
+                                <input type="text" class="form-control input-lg" name="newUser" placeholder="New User" required
+                                 id="newUser">
                             </div>
 
                         </div>
