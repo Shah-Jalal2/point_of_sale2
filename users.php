@@ -106,7 +106,8 @@ include "header.php";
 
                                         <button class="btn btn-warning btnEditUser" data-toggle="modal" data-target="#modalEditUser-<?= $row['id'] ?>"><i class="fa fa-pen"></i></button>
 
-                                        <button class="btn btn-danger btnDeleteUser"><i class="fa fa-times"></i></button>
+<!--                                        <button class="btn btn-danger" ><i class="fa fa-times"></i></button>-->
+                                        <a href="controllers/deleteUser.controller.php?user_delete=<?= base64_encode($row['id']) ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete')"><i class="fa fa-times"></i></a>
 
 
                                     </div>

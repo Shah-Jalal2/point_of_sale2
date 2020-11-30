@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/deleteUser.controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/login.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/users.php" afterDir="false" />
     </list>
@@ -88,7 +88,8 @@
       <workItem from="1606639957684" duration="144000" />
       <workItem from="1606640940696" duration="2392000" />
       <workItem from="1606666972948" duration="9762000" />
-      <workItem from="1606710464505" duration="10211000" />
+      <workItem from="1606710464505" duration="10720000" />
+      <workItem from="1606746842485" duration="2338000" />
     </task>
     <servers />
   </component>
@@ -105,6 +106,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1506" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606500080079">

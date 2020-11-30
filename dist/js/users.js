@@ -54,20 +54,21 @@ $(".newPicture").change(function (){
 //     <!--                                        Delete User      -->
 // <!--==================================================================================================== -->
 
-
-$(".btnDeleteUser").click(function () {
-    swal({
-        title: "Are you sure?",
-        text: "Once deleted, you will not be able to recover this imaginary file!",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-    })
-        .then((willDelete) => {
-            if (willDelete) {
-                swal("Poof! Your imaginary file has been deleted!", {
-                    icon: "success",
-                });
-            }
-        });
-})
+//
+// $(".btnDeleteUser").click(function () {
+//     swal({
+//         title: "delete user?",
+//         text: "Once deleted, you will not be able to recover this imaginary file!",
+//         icon: "warning",
+//         buttons: true,
+//         dangerMode: true,
+//
+//     })
+//         .then(($result) => {
+//
+//             if (result.value) {
+//                 window.location = "index.php?route=users&userPhoto=&userId"
+//             }
+//
+//         });
+// })
