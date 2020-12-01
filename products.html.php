@@ -30,8 +30,8 @@ include "header.php";
 
         <div class="card">
             <div class="card-header">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#modalAddCategory">
-                    Add User
+                <button class="btn btn-primary" data-toggle="modal" data-target="#modalAddProduct">
+                    Add Product
                 </button>
             </div>
 
@@ -58,52 +58,32 @@ include "header.php";
                         </thead>
 
                         <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="dist/img/products/aspirador-industrial.png" alt="" class="img-thumbnail" width="50px"></td>
+                            <td>0001</td>
+                            <td>lorem ipsseml</td>
+                            <td>Adminastrator</td>
+                            <td>lorem ipsf</td>
+                            <td>20</td>
+                            <td>5.00</td>
+                            <td>10.00</td>
+                            <td>2020-11-12 12:05:32</td>
+                            <td>
 
-                        <?php
+                                <div class="btn-group">
 
-                        include "connection.php";
+                                    <button class="btn btn-warning"><i class="fa fa-pen"></i></button>
 
-                        $query = "SELECT * FROM products";
-                        $result = mysqli_query($conn, $query);
-
-                        $count = 0;
-
-
-                        while ($row = mysqli_fetch_assoc($result)){
-                            $count++;
-                            ?>
-
-                            <tr>
-                                <td><?= $count ?></td>
-                                <td><img src="dist/img/products/aspirador-industrial.png" alt="" class="img-thumbnail" width="50px"></td>
-                                <td><?= $row['code'] ?></td>
-                                <td><?= $row['description'] ?></td>
-                                <td>Adminastrator</td>
-                                <td><?= $row['stock'] ?></td>
-                                <td><?= $row['buying_price'] ?></td>
-                                <td><?= $row['selling_price'] ?></td>
-<!--                                <td>--><?//= $row['sales'] ?><!--</td>-->
-                                <td><?= $row['date'] ?></td>
-                                <td>
-
-                                    <div class="btn-group">
-
-                                        <button class="btn btn-warning"><i class="fa fa-pen"></i></button>
-
-                                        <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                    <button class="btn btn-danger"><i class="fa fa-times"></i></button>
 
 
-                                    </div>
+                                </div>
 
-                                </td>
-                            </tr>
-
-                            <?php
-                        }
-                        ?>
+                            </td>
+                        </tr>
 
                         </tbody>
-
 
                     </table>
 
@@ -117,7 +97,6 @@ include "header.php";
 
     </section>
     <!-- /.content -->
-
 </div>
 <!-- /.content-wrapper -->
 
@@ -129,7 +108,7 @@ include "header.php";
 
 
 
- Modal
+<!-- Modal -->
 <div id="modalAddProduct" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -216,6 +195,11 @@ include "header.php";
                             </div>
 
                         </div>
+
+
+
+
+
 
 
                         <!-- INPUT BUYING PRICE -->
@@ -340,5 +324,55 @@ include "header.php";
 include "footer.php";
 ?>
 
+
+
+
+
+<tbody>
+
+<?php
+
+include "connection.php";
+
+$query = "SELECT * FROM products";
+$result = mysqli_query($conn, $query);
+
+$count = 0;
+
+
+while ($row = mysqli_fetch_assoc($result)){
+    $count++;
+    ?>
+
+    <tr>
+        <td><?= $count ?></td>
+        <td><img src="dist/img/products/aspirador-industrial.png" alt="" class="img-thumbnail" width="50px"></td>
+        <td><?= $row['code'] ?></td>
+        <td><?= $row['description'] ?></td>
+        <td>Adminastrator</td>
+        <td><?= $row['stock'] ?></td>
+        <td><?= $row['buying_price'] ?></td>
+        <td><?= $row['selling_price'] ?></td>
+        <td><?= $row['sales'] ?></td>
+        <td><?= $row['date'] ?></td>
+        <td>
+
+            <div class="btn-group">
+
+                <button class="btn btn-warning"><i class="fa fa-pen"></i></button>
+
+                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+
+
+            </div>
+
+        </td>
+    </tr>
+
+    <?php
+}
+?>
+
+</tbody>
 
 

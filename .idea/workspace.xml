@@ -20,9 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/products.html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/userUpdate.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userUpdate.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/users.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/348.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/511.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/670.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/tasnim/704.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +61,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\php_project\research\POS2\dist\js\pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\php_project\research\POS4" />
       <recent name="C:\xampp\htdocs\php_project\research\POS2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php_project\research\POS2\dist\js\pages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +97,7 @@
       <workItem from="1606666972948" duration="9762000" />
       <workItem from="1606710464505" duration="10720000" />
       <workItem from="1606746842485" duration="14846000" />
-      <workItem from="1606797234921" duration="1804000" />
+      <workItem from="1606797234921" duration="5321000" />
     </task>
     <servers />
   </component>

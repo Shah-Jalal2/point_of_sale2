@@ -25,8 +25,14 @@ if (isset($_POST['updatetUser'])) {
 
         $directori = "dist/img/users/" . $_POST["editUser"];
 
-        if(!empty($_POST['currentPicture'])) {
-            unlink($_POST['currentPicture']);
+        $current_directori = "dist/img/users/" . $_POST["currentPicture"];
+
+//        if(!empty($_POST['currentPicture'])) {
+//            unlink($_POST['currentPicture']);
+//        }
+
+        if(file_exists($directori)) {
+            unlink($_POST[$directori]);
         }
 
         else{
