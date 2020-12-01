@@ -63,7 +63,9 @@ include "header.php";
 
                         include "connection.php";
 
-                        $query = "SELECT * FROM products";
+//                        $query = "SELECT * FROM products";
+                        $query = "SELECT products.code, products.image, products.buying_price, products.selling_price, products.date, products.stock, products.description, category.category FROM products
+                                    LEFT JOIN category ON category.id = products.id_category";
                         $result = mysqli_query($conn, $query);
 
                         $count = 0;
@@ -78,7 +80,7 @@ include "header.php";
                                 <td><img src="dist/img/products/aspirador-industrial.png" alt="" class="img-thumbnail" width="50px"></td>
                                 <td><?= $row['code'] ?></td>
                                 <td><?= $row['description'] ?></td>
-                                <td>Adminastrator</td>
+                                <td><?= $row['category'] ?></td>
                                 <td><?= $row['stock'] ?></td>
                                 <td><?= $row['buying_price'] ?></td>
                                 <td><?= $row['selling_price'] ?></td>
@@ -323,16 +325,6 @@ include "header.php";
 <!--==================================================================================================== -->
 
 
-
-
-<!--====================================================================================================-->
-<!--                                        Modal Add User End             -->
-<!--==================================================================================================== -->
-
-
-
-
-<!-- Modal -->
 
 
 
