@@ -21,16 +21,20 @@ if (isset($_POST['saveUser'])) {
 
     $route = "";
 
-   if (isset($_FILES["newPicture"]["tmp_name"])) {
-       list($width, $height) = getimagesize($_FILES["newPicture"]["tmp_name"]);
+    if (isset($_FILES["newPicture"]["tmp_name"])) {
+        list($width, $height) = getimagesize($_FILES["newPicture"]["tmp_name"]);
 
-       $newHeight = 500;
-       $newWidth = 500;
+        $newHeight = 500;
+        $newWidth = 500;
 
-       $directori = "dist/img/users/" . $_POST["newUser"];
+        $directori = "dist/img/users/" . $_POST["newUser"];
 
 
-        mkdir($directori, 0755);
+
+
+        if (!file_exists($directori)) {
+            mkdir($directori, 0755, true);
+        }
 
         if ($_FILES["newPicture"]["type"] == "image/jpeg") {
 
@@ -48,22 +52,22 @@ if (isset($_POST['saveUser'])) {
 
         }
 
-       if ($_FILES["newPicture"]["type"] == "image/png") {
+        if ($_FILES["newPicture"]["type"] == "image/png") {
 
-           $random = mt_rand(100, 999);
+            $random = mt_rand(100, 999);
 
-           $route = "dist/img/users/" . $_POST["newUser"]. "/" . $random . ".png";    // Image is here
+            $route = "dist/img/users/" . $_POST["newUser"]. "/" . $random . ".png";    // Image is here
 
-           $origin = imagecreatefrompng($_FILES["newPicture"]["tmp_name"]);
+            $origin = imagecreatefrompng($_FILES["newPicture"]["tmp_name"]);
 
-           $destiny = imagecreatetruecolor($newWidth, $newHeight);
+            $destiny = imagecreatetruecolor($newWidth, $newHeight);
 
-           imagecopyresized($destiny, $origin, 0, 0, 0, 0, $newWidth, $newHeight, $height, $width);
+            imagecopyresized($destiny, $origin, 0, 0, 0, 0, $newWidth, $newHeight, $height, $width);
 
-           imagepng($destiny, $route);
+            imagepng($destiny, $route);
 
-       }
-   }
+        }
+    }
 
 
 
