@@ -65,7 +65,7 @@ include "header.php";
 
                             //                        $query = "SELECT * FROM products";
                             $query = "SELECT products.code, products.image, products.buying_price, products.selling_price, products.date, products.stock, products.description, category.category FROM products
-                                    LEFT JOIN category ON category.id = products.id_category";
+                                    LEFT JOIN category ON category.id = products.id_category ORDER BY products.id DESC";
                             $result = mysqli_query($conn, $query);
 
                             $count = 0;
@@ -102,6 +102,10 @@ include "header.php";
 
                                 <?php
                             }
+                            ?>
+
+                            <?php
+                                include_once "controllers/addProduct.controller.php";
                             ?>
 
                             </tbody>
@@ -157,20 +161,9 @@ include "header.php";
                 <div class="modal-body">
 
                     <div class="box-body">
-                        <form action="" method="post" >
+                        <form action="" method="post" enctype="multipart/form-data">
 
-                            <!--                    ENTRY FOR CODE-->
 
-                            <div class="form-group">
-
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-code"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control input-lg" name="newCode" placeholder="Add Code" required>
-                                </div>
-
-                            </div>
 
                             <!--                    ENTRY FOR Descripton-->
 
@@ -180,11 +173,24 @@ include "header.php";
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-product-hunt"></i></span>
                                     </div>
-                                    <input type="text" class="form-control input-lg" name="newDescription" placeholder="Add Description" required>
+                                    <input type="text" class="form-control input-lg" name="productDescription" placeholder="Prouduct Description" required>
                                 </div>
 
                             </div>
 
+
+                            <!--                    ENTRY FOR CODE-->
+
+                            <div class="form-group">
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-code"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control input-lg" name="productCode" placeholder="Add Code" required>
+                                </div>
+
+                            </div>
 
                             <!--                    Check category-->
 
@@ -194,9 +200,9 @@ include "header.php";
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-th"></i></span>
                                     </div>
-                                    <select class="form-control input-lg" name="newCategory">
+                                    <select class="form-control input-lg" name="productCategory" id="productCategoryfse" required>
 
-                                        <option value="">Select Category</option>
+                                        <option value="" >Select Category</option>
 
                                         <?php
 
@@ -207,18 +213,18 @@ include "header.php";
 
                                             while ($row = mysqli_fetch_assoc($result)) {
                                                 ?>
-                                                     <option value="<?= $row['category'] ?>"><?= $row['category'] ?></option>
-                                                <?php
+                                                     <option value="<?= $row['id'] ?>"><?= $row['category'] ?>
+
+                                                         <?php
+
                                             }
 
 
                                         ?>
 
-<!--                                        <option value="CONSTRUCTION EQUIPMENT">Adminastrator</option>-->
-<!--                                        <option value="Drill">Special</option>-->
-<!--                                        <option value="POWER GENERATORS">Seller</option>-->
 
                                     </select>
+
                                 </div>
 
                             </div>
@@ -231,75 +237,39 @@ include "header.php";
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-check"></i></span>
                                     </div>
-                                    <input type="number" class="form-control input-lg" name="newStock" min="0" placeholder="Stock" required>
+                                    <input type="number" class="form-control input-lg" name="productStock" min="0" placeholder="Stock" required>
+                                </div>
+
+                            </div>
+
+                            <!--                    INPUT FOR BUYING PRICE -->
+
+                            <div class="form-group">
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-check"></i></span>
+                                    </div>
+                                    <input type="number" class="form-control input-lg" name="buyingPrice" min="0" placeholder="Buying Price" required>
+                                </div>
+
+                            </div>
+
+                            <!--                    INPUT FOR SELLING PRICE-->
+
+                            <div class="form-group">
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-check"></i></span>
+                                    </div>
+                                    <input type="number" class="form-control input-lg" name="sellingPrice" min="0" placeholder="Selling Price" required>
                                 </div>
 
                             </div>
 
 
-                            <!-- INPUT BUYING PRICE -->
-                            <div class="form-group row">
-
-                                <div class="col-xs-6">
-
-                                    <div class="input-group">
-
-                                        <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span>
-
-                                        <input type="number" class="form-control input-lg" name="newBuyingPrice" min="0" placeholder="Buying Price" required>
-
-                                    </div>
-
-                                </div>
-
-                                <!-- INPUT SELLING PRICE -->
-                                <div class="col-xs-6">
-
-                                    <div class="input-group">
-
-                                        <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
-
-                                        <input type="number" class="form-control input-lg" name="newSellingPrice" min="0" placeholder="Selling Price" required>
-
-                                    </div>
-
-                                    <br>
-
-                                    <!-- CHECKBOX PERCENTAGE -->
-                                    <div class="col-xs-6">
-
-                                        <div class="form-group">
-
-                                            <label>
-
-                                                <input type="checkbox" class="minimal percentage" checked>
-
-                                                Use percentage
-
-                                            </label>
-
-                                        </div>
-
-                                    </div>
-
-                                    <!-- INPUT PERCENTAGE -->
-                                    <div class="col-xs-6" style="padding:0">
-
-                                        <div class="input-group">
-
-                                            <input type="number" class="form-control input-lg newPercentage" min="0" value="40" required>
-
-                                            <span class="input-group-addon"><i class="fa fa-percent"></i></span>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <!--                    ENTRY FOR PICTURE-->
+<!--                                        ENTRY FOR PICTURE-->
 
                             <div class="form-group">
 
