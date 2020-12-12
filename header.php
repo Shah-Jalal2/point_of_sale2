@@ -72,7 +72,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 =============================================*/
 -->
 
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-white navbar-light" >
   <!-- Left navbar links -->
   <ul class="navbar-nav">
       <li class="nav-item">
@@ -83,10 +83,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
   <!-- Right navbar links -->
-  <ul class="navbar-nav ml-auto">
+  <ul class="navbar-nav ml-auto ">
 
-      <li class="dropdown user user-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      <li class="dropdown user user-menu" ;">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
 
               <?php
 
@@ -102,7 +102,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               ?>
 
 
-              <span class="hidden-xs"> <?php echo $_SESSION['name'] ?> </span>
+              <span class="hidden-xs link-black" > <?php echo $_SESSION['name'] ?> </span>
           </a>
 
           <ul class="dropdown-menu">

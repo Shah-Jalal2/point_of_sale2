@@ -77,7 +77,6 @@ include "header.php";
 
                                     <button class="btn btn-danger"><i class="fa fa-times"></i></button>
 
-
                                 </div>
 
                             </td>
