@@ -83,7 +83,7 @@ include "header.php";
                                     <td><?= $row['category'] ?></td>
                                     <td><?= $row['stock'] ?></td>
                                     <td><?= $row['buying_price'] ?></td>
-                                    <td><?= $row['selling_price'] ?></td>
+                                    <td><?= $row['selling_price']  ?></td>
                                     <!--                                <td>--><?//= $row['sales'] ?><!--</td>-->
                                     <td><?= $row['date'] ?></td>
                                     <td>
@@ -374,7 +374,7 @@ while ($row = mysqli_fetch_assoc($result)){
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control input-lg" name="editName" value="<?= $editPoductsInfo['description'] ?>" required>
+                                    <input type="text" class="form-control input-lg" name="editProductDesc" value="<?= $editPoductsInfo['description'] ?>" required>
                                     <input type="hidden" class="form-control" name="id"  value="<?= $editPoductsInfo['id'] ?>" required>    <!--HIDDEN ID PASS-->
                                 </div>
 
@@ -390,7 +390,7 @@ while ($row = mysqli_fetch_assoc($result)){
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-code"></i></span>
                                     </div>
-                                    <input type="text" class="form-control input-lg" name="productCode" value="<?= $editPoductsInfo['code'] ?>" required>
+                                    <input type="text" class="form-control input-lg" name="editProductCode" value="<?= $editPoductsInfo['code'] ?>" required>
                                 </div>
 
                             </div>
@@ -404,7 +404,7 @@ while ($row = mysqli_fetch_assoc($result)){
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-users"></i></span>
                                     </div>
-                                    <select class="form-control input-lg" name="editProfile" >
+                                    <select class="form-control input-lg" name="editProductCategory" >
 
                                         <?php
 
@@ -413,7 +413,8 @@ while ($row = mysqli_fetch_assoc($result)){
                                         $sql2 = "SELECT * FROM category where id = '$p_category'";
                                         $res2 = mysqli_query($conn, $sql2);
                                         $row2 = mysqli_fetch_assoc($res2);
-                                        echo "<option value='{$row['id']}'>{$row2['category']}</option>";
+//                                        echo "<option value='{$row2['id']}'>{$row2['category']}</option>";
+                                        echo "<option value=''>{$row2['category']}</option>";
 
                                         $sql3 = "SELECT * FROM category ";
                                         $res3 = mysqli_query($conn, $sql3);
@@ -439,7 +440,7 @@ while ($row = mysqli_fetch_assoc($result)){
                             </div>
 
 
-                            <!--                    ENTRY FOR CODE-->
+                            <!--                    ENTRY FOR Stock-->
 
                             <div class="form-group">
 
@@ -447,7 +448,7 @@ while ($row = mysqli_fetch_assoc($result)){
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-code"></i></span>
                                     </div>
-                                    <input type="text" class="form-control input-lg" name="productCode" value="<?= $editPoductsInfo['stock'] ?>" required>
+                                    <input type="text" class="form-control input-lg" name="editProductStock" value="<?= $editPoductsInfo['stock'] ?>" required>
                                 </div>
 
                             </div>
@@ -460,7 +461,7 @@ while ($row = mysqli_fetch_assoc($result)){
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-code"></i></span>
                                     </div>
-                                    <input type="number" class="form-control input-lg" name="sellingPrice" min="0" step="any" value="<?= $editPoductsInfo['buying_price'] ?>" required>
+                                    <input type="number" class="form-control input-lg" name="editBuyingPrice" min="0" step="any" value="<?= $editPoductsInfo['buying_price'] ?>" required>
                                 </div>
 
                             </div>
@@ -473,7 +474,7 @@ while ($row = mysqli_fetch_assoc($result)){
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-code"></i></span>
                                     </div>
-                                    <input type="number" class="form-control input-lg" name="sellingPrice" min="0" step="any" value="<?= $editCategoryInfo['selling_price'] ?>"  required>
+                                    <input type="number" class="form-control input-lg" name="editSellingPrice" min="0" step="any" value="<?= $editCategoryInfo['selling_price'] ?>"  required>
                                 </div>
 
                             </div>
@@ -498,7 +499,7 @@ while ($row = mysqli_fetch_assoc($result)){
 
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary" name="updatetUser">Update User</button>
+                                <button type="submit" class="btn btn-primary" name="updateProduct">Update User</button>
                             </div>
 
                         </form>
@@ -521,7 +522,7 @@ while ($row = mysqli_fetch_assoc($result)){
 //            <!--                                        Update User          --
 //--==================================================================================================== -->
 
-include_once 'controllers/userUpdate.controller.php';
+include_once 'controllers/updateProduct.php';
 
 ?>
 

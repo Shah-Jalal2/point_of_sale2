@@ -20,22 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/updateProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/addProduct.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addProduct.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/Figura-2-Hidrolavadora-a-gasolina.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/GIMSA-TUB1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/Plato-flotante.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/aspirador-industrial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/compresor de aire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/cortadora de disco.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/dremel-dsm540-discos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/extractor-de-aire-industrial-16pulg-tipo-axial-directo-mf-D_NQ_NP_266501-MLM20369580715_082015-F.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/guadañadora.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/hidrolavadora-electrica-hobby-110v-1750psi-genpar-D_NQ_NP_13134-MLV20073618263_042014-F.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/updateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/updateProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/639/174.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +95,7 @@
       <workItem from="1606827130264" duration="12073000" />
       <workItem from="1607754373752" duration="9316000" />
       <workItem from="1607786708917" duration="12307000" />
-      <workItem from="1607837804814" duration="3792000" />
+      <workItem from="1607837804814" duration="9758000" />
     </task>
     <servers />
   </component>
