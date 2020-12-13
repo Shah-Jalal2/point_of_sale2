@@ -20,9 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/addProduct.controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/updateProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addProduct.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addProduct.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/Figura-2-Hidrolavadora-a-gasolina.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/GIMSA-TUB1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/Plato-flotante.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/aspirador-industrial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/compresor de aire.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/cortadora de disco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/dremel-dsm540-discos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/extractor-de-aire-industrial-16pulg-tipo-axial-directo-mf-D_NQ_NP_266501-MLM20369580715_082015-F.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/guadañadora.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/products/hidrolavadora-electrica-hobby-110v-1750psi-genpar-D_NQ_NP_13134-MLV20073618263_042014-F.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/products.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +67,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php_project\research\POS2\dist\js\pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\php_project\research\POS4" />
       <recent name="C:\xampp\htdocs\php_project\research\POS2" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\php_project\research\POS2\dist\js\pages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -92,7 +105,9 @@
       <workItem from="1606746842485" duration="14846000" />
       <workItem from="1606797234921" duration="8550000" />
       <workItem from="1606827130264" duration="12073000" />
-      <workItem from="1607754373752" duration="8930000" />
+      <workItem from="1607754373752" duration="9316000" />
+      <workItem from="1607786708917" duration="12307000" />
+      <workItem from="1607837804814" duration="3792000" />
     </task>
     <servers />
   </component>
@@ -144,11 +159,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/users.php</url>
-          <line>434</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/ajax/datatable-products.ajax.php</url>
           <line>12</line>

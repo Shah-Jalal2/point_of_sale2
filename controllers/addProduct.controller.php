@@ -13,9 +13,57 @@ if (isset($_POST['saveProducts'])) {
     $buyingPrice = $_POST['buyingPrice'];
     $sellingPrice = $_POST['sellingPrice'];
 
+    $route = "";
 
-    $query = "INSERT INTO `products`(`id_category`, `code`, `description`,  `stock`, `buying_price`, `selling_price`) 
-              VALUES ('$productCategory', '$$productCode', '$productDescription', '$productStock', '$buyingPrice', '$sellingPrice')";
+    if (isset($_FILES["newImage"]["tmp_name"])) {
+        list($width, $height) = getimagesize($_FILES["newImage"]["tmp_name"]);
+
+        $newHeight = 500;
+        $newWidth = 500;
+
+        $directori = "dist/img/products/" . $_POST['productCode'];
+
+
+        if (!file_exists($directori)) {
+            mkdir($directori, 0755);
+        }
+
+        if ($_FILES["newImage"]["type"] == "image/jpeg") {
+
+            $random = mt_rand(100, 999);
+
+            $route = "dist/img/products/" . $_POST['productCode']. "/" . $random . ".jpg";
+
+            $origin = imagecreatefromjpeg($_FILES["newImage"]["tmp_name"]);
+
+            $destiny = imagecreatetruecolor($newWidth, $newHeight);
+
+            imagecopyresized($destiny, $origin, 0, 0, 0, 0, $newWidth, $newHeight, $height, $width);
+
+            imagejpeg($destiny, $route);
+
+        }
+
+        if ($_FILES["newImage"]["type"] == "image/png") {
+
+            $random = mt_rand(100, 999);
+
+            $route = "dist/img/products/" . $_POST['productCode']. "/" . $random . ".png";    // Image is here
+
+            $origin = imagecreatefrompng($_FILES["newImage"]["tmp_name"]);
+
+            $destiny = imagecreatetruecolor($newWidth, $newHeight);
+
+            imagecopyresized($destiny, $origin, 0, 0, 0, 0, $newWidth, $newHeight, $height, $width);
+
+            imagepng($destiny, $route);
+
+        }
+    }
+
+
+    $query = "INSERT INTO `products`(`id_category`, `code`, `description`,  `stock`, `buying_price`, `selling_price`, `image`) 
+              VALUES ('$productCategory', '$productCode', '$productDescription', '$productStock', '$buyingPrice', '$sellingPrice', '$route')";
     $result = mysqli_query($conn, $query);
 
     if ($result) {

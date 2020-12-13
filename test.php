@@ -2,276 +2,323 @@
 include "header.php";
 ?>
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper"">
-<!-- Content Header (Page header) -->
-<section class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <h2>Test</h2>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i>Homepage</a></li>
-                    <li class="breadcrumb-item active">Test</li>
-                </ol>
-            </div>
-        </div>
-    </div><!-- /.container-fluid -->
-</section>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h2>Manage Products</h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i>Homepage</a></li>
+                            <li class="breadcrumb-item active">Manage Products</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
 
 
 
 
 
-<!-- Main content -->
-<section class="content">
+        <!-- Main content -->
+        <section class="content">
 
-    <div class="card">
-        <div class="card-header">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modalAddCategory">
-                Add User
-            </button>
-        </div>
+            <div class="card">
+                <div class="card-header">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalAddProduct">
+                        Add User
+                    </button>
+                </div>
 
 
-        <div class="card-body">
+                <div class="card-body">
 
-            <div class="box">
+                    <div class="box">
 
-                <table class="table table-bordered table-striped table-responsive-sm productsTable">      <!-- dt resposinve is from datatable-->
+                        <table class="table table-bordered table-striped table-responsive-sm mydatatable">      <!-- dt resposinve is from datatable-->
 
-                    <thead>
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Image</th>
+                                <th>Code</th>
+                                <th>description</th>
+                                <th>Category</th>
+                                <th>Stock</th>
+                                <th>Buying Price</th>
+                                <th>Sell Price</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
 
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Extn.</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
+                            <tbody>
 
+                            <?php
 
+                            include "connection.php";
 
+//                                                    $query = "SELECT * FROM products";
+                            $query = "SELECT products.code, products.id, products.image, products.buying_price, products.selling_price, products.date, products.stock, products.description, category.category FROM products
+                                    LEFT JOIN category ON category.id = products.id_category ORDER BY products.id DESC";
+                            $result = mysqli_query($conn, $query);
 
-                </table>
+//                            $count = 0;
+//
+//                            $query = "SELECT * FROM products";
+//                            $result = mysqli_query($conn, $query);
 
+                            $count = 0;
 
-            </div>
 
-        </div>
+                            while ($row = mysqli_fetch_assoc($result)){
+                                $count++;
+                                ?>
 
-    </div>
-    <!-- /.card -->
+                                <tr>
+                                    <td><?= $count ?></td>
+                                    <td><img src="<?= $row['image'] ?>" alt="" class="img-thumbnail" width="50px"></td>
+                                    <td><?= $row['code'] ?></td>
+                                    <td><?= $row['description'] ?></td>
+                                    <td><?= $row['category'] ?></td>
+                                    <td><?= $row['stock'] ?></td>
+                                    <td><?= $row['buying_price'] ?></td>
+                                    <td><?= $row['selling_price'] ?></td>
+                                    <!--                                <td>--><?//= $row['sales'] ?><!--</td>-->
+                                    <td><?= $row['date'] ?></td>
+                                    <td>
 
-</section>
-<!-- /.content -->
+                                        <div class="btn-group">
 
-</div>
-<!-- /.content-wrapper -->
+                                            <button class="btn btn-warning btnEditUser" data-toggle="modal" data-target="#modalEditUser-<?= $row['id'] ?>"><i class="fa fa-pen"></i></button>
 
 
+                                            <!--                                        <button class="btn btn-danger" ><i class="fa fa-times"></i></button>-->
+                                            <a href="controllers/deleteUser.controller.php?user_delete=<?= base64_encode($row['id']) ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete')"><i class="fa fa-times"></i></a>
 
-<!--====================================================================================================-->
-<!--                                        Modal Add Products              -->
-<!--==================================================================================================== -->
 
+                                        </div>
 
 
-Modal
-<div id="modalAddProduct" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+                                    </td>
+                                </tr>
 
-        <!-- Modal content-->
-        <div class="modal-content">
+                                <?php
+                            }
+                            ?>
 
 
-            <!--====================================================================================================-->
-            <!--                                        Modal Header            -->
-            <!--==================================================================================================== -->
+                            </tbody>
 
-            <div class="modal-header" style="background: #3c8dbc; color: white;">
+                        </table>
 
-                <h4 class="modal-title">Add Products</h4>
 
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!--====================================================================================================-->
-            <!--                                        Modal Body          -->
-            <!--==================================================================================================== -->
-
-            <div class="modal-body">
-
-                <div class="box-body">
-                    <form action="" method="post" >
-
-                        <!--                    ENTRY FOR CODE-->
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-code"></i></span>
-                                </div>
-                                <input type="text" class="form-control input-lg" name="newCode" placeholder="Add Code" required>
-                            </div>
-
-                        </div>
-
-                        <!--                    ENTRY FOR Descripton-->
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-product-hunt"></i></span>
-                                </div>
-                                <input type="text" class="form-control input-lg" name="newDescription" placeholder="Add Description" required>
-                            </div>
-
-                        </div>
-
-
-                        <!--                    Check category-->
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-th"></i></span>
-                                </div>
-                                <select class="form-control input-lg" name="newCategory">
-
-                                    <option value="">Select Category</option>
-                                    <option value="CONSTRUCTION EQUIPMENT">Adminastrator</option>
-                                    <option value="Drill">Special</option>
-                                    <option value="POWER GENERATORS">Seller</option>
-
-                                </select>
-                            </div>
-
-                        </div>
-
-                        <!--                    INPUT FOR STOCK-->
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-check"></i></span>
-                                </div>
-                                <input type="number" class="form-control input-lg" name="newStock" min="0" placeholder="Stock" required>
-                            </div>
-
-                        </div>
-
-
-                        <!-- INPUT BUYING PRICE -->
-                        <div class="form-group row">
-
-                            <div class="col-xs-6">
-
-                                <div class="input-group">
-
-                                    <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span>
-
-                                    <input type="number" class="form-control input-lg" name="newBuyingPrice" min="0" placeholder="Buying Price" required>
-
-                                </div>
-
-                            </div>
-
-                            <!-- INPUT SELLING PRICE -->
-                            <div class="col-xs-6">
-
-                                <div class="input-group">
-
-                                    <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
-
-                                    <input type="number" class="form-control input-lg" name="newSellingPrice" min="0" placeholder="Selling Price" required>
-
-                                </div>
-
-                                <br>
-
-                                <!-- CHECKBOX PERCENTAGE -->
-                                <div class="col-xs-6">
-
-                                    <div class="form-group">
-
-                                        <label>
-
-                                            <input type="checkbox" class="minimal percentage" checked>
-
-                                            Use percentage
-
-                                        </label>
-
-                                    </div>
-
-                                </div>
-
-                                <!-- INPUT PERCENTAGE -->
-                                <div class="col-xs-6" style="padding:0">
-
-                                    <div class="input-group">
-
-                                        <input type="number" class="form-control input-lg newPercentage" min="0" value="40" required>
-
-                                        <span class="input-group-addon"><i class="fa fa-percent"></i></span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!--                    ENTRY FOR PICTURE-->
-
-                        <div class="form-group">
-
-                            <div class="panel">Upload Image</div>
-
-                            <input type="file" id="newProductImage " name="newProductImage">
-
-                            <p class="help-block">Maximum picture size 2MB </p>
-
-                            <img src="dist/img/user/avatar.png" class="img-thumbnail" width="100px">
-
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary" name="saveProducts">Save Products</button>
-                        </div>
-
-                    </form>
-
-
+                    </div>
 
                 </div>
 
             </div>
 
+            <!-- /.card -->
 
-        </div>
+        </section>
+        <!-- /.content -->
 
     </div>
-</div>
+    <!-- /.content-wrapper -->
 
 
 
 
 
+<?php
 
 
-<!--====================================================================================================-->
-<!--                                        Modal Add User End             -->
-<!--==================================================================================================== -->
+include "connection.php";
+
+$query = "SELECT * FROM products";
+
+//$query = "SELECT products.code, products.id, products.image, products.buying_price, products.selling_price, products.date, products.stock, products.description, category.category FROM products
+//                                    LEFT JOIN category ON category.id = products.id_category ORDER BY products.id DESC";
+
+$result = mysqli_query($conn, $query);
+
+
+while ($row = mysqli_fetch_assoc($result)){
+    $id = $row['id'];
+    $query = "SELECT * FROM products WHERE `id` = '$id'";
+    $p_category = $row['id_category'];
+
+    $user_info = mysqli_query($conn, $query);
+    $editUserInfo = mysqli_fetch_assoc($user_info);
+    ?>
+
+
+    <!-- Modal -->
+    <div id="modalEditUser-<?= $row['id'] ?>" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <!--            <form  method="post" action="" enctype="multipart/form-data"></form>-->
+
+                <!--====================================================================================================-->
+                <!--                                        Modal Header            -->
+                <!--==================================================================================================== -->
+
+                <div class="modal-header" style="background: #3c8dbc; color: white;">
+
+                    <h4 class="modal-title">Edit User</h4>
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!--====================================================================================================-->
+                <!--                                        Modal Body          -->
+                <!--==================================================================================================== -->
+
+                <div class="modal-body">
+
+                    <div class="box-body">
+
+                        <form action="" method="post" enctype="multipart/form-data">
+
+
+                            <!--                    ENTRY FOR NAME-->
+
+                            <div class="form-group">
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control input-lg" name="editName" value="<?= $p_category ?>" required>
+                                    <input type="hidden" class="form-control" name="id"  value="<?= $editUserInfo['id'] ?>" required>    <!--HIDDEN ID PASS-->
+                                </div>
+
+                            </div>
+
+                            <!--                    ENTRY FOR USER-->
+
+                            <div class="form-group">
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control input-lg" name="editUser" value="<?= $editUserInfo['user'] ?>" required>
+                                </div>
+
+                            </div>
+
+                            <!--                    ENTRY FOR PASSWORD-->
+
+                            <div class="form-group">
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    </div>
+                                    <input type="password" class="form-control input-lg" name="editPassword" placeholder="Write a New Password" required>
+                                </div>
+
+                            </div>
+
+                            <!--                    ENTRY FOR SELECT PROFILE-->
+
+                            <div class="form-group">
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-users"></i></span>
+                                    </div>
+                                    <select class="form-control input-lg" name="editProfile" >
+
+                                        <?php
+
+                                        include_once "connection.php";
+
+                                        $sql2 = "SELECT * FROM category where id = '$p_category'";
+                                        $res2 = mysqli_query($conn, $sql2);
+                                        $row2 = mysqli_fetch_assoc($res2);
+                                        echo "<option value='{$row['id']}'>{$row2['category']}</option>";
+
+                                        $sql3 = "SELECT * FROM category ";
+                                        $res3 = mysqli_query($conn, $sql3);
+                                        while ($row3 = mysqli_fetch_assoc($res3)) {
+
+//                                            if ($row2['category'] == $row3['category']) {
+//                                                $selected = "";
+//                                            }
+
+                                            echo "<option value='{$row3['id']}'>{$row3['category']}</option>";
+
+
+
+
+                                        }
+
+                                        ?>
+
+
+
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <!--                    ENTRY FOR PICTURE-->
+
+                            <div class="form-group">
+
+                                <div class="panel">Upload Picture</div>
+
+                                <input type="file" class="newPicture" name="editPicture">
+
+                                <p class="help-block">Maximum picture size 200MB </p>
+
+                                <img src="<?= $editUserInfo['picture'] ?>" class="img-thumbnail preview" width="100px">
+                                <input type="hidden" name="currentPicture" id="currentPicture">
+
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" name="updatetUser">Update User</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <?php
+
+}
+
+
+//<!--====================================================================================================-->
+//            <!--                                        Update User          --
+//--==================================================================================================== -->
+
+include_once 'controllers/userUpdate.controller.php';
+
+?>
+
 
 
 
@@ -283,285 +330,146 @@ include "footer.php";
 
 
 
-<?php
-include "header.php";
-?>
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper"">
-<!-- Content Header (Page header) -->
-<section class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <h2>Manage Products</h2>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i>Homepage</a></li>
-                    <li class="breadcrumb-item active">Manage Products</li>
-                </ol>
-            </div>
-        </div>
-    </div><!-- /.container-fluid -->
-</section>
 
 
 
+<div class="modal-body">
 
+    <div class="box-body">
+        <form action="" method="post" enctype="multipart/form-data">
 
-<!-- Main content -->
-<section class="content">
 
-    <div class="card">
-        <div class="card-header">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modalAddCategory">
-                Add User
-            </button>
-        </div>
 
+            <!--                    ENTRY FOR Descripton-->
 
-        <div class="card-body">
+            <div class="form-group">
 
-            <div class="box">
-
-                <table class="table table-bordered table-striped table-responsive-sm productsTable">      <!-- dt resposinve is from datatable-->
-
-                    <thead>
-
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Extn.</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-
-                </table>
-
-
-            </div>
-
-        </div>
-
-    </div>
-    <!-- /.card -->
-
-</section>
-<!-- /.content -->
-
-</div>
-<!-- /.content-wrapper -->
-
-
-
-<!--====================================================================================================-->
-<!--                                        Modal Add Products              -->
-<!--==================================================================================================== -->
-
-
-
-Modal
-<div id="modalAddProduct" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-
-
-            <!--====================================================================================================-->
-            <!--                                        Modal Header            -->
-            <!--==================================================================================================== -->
-
-            <div class="modal-header" style="background: #3c8dbc; color: white;">
-
-                <h4 class="modal-title">Add Products</h4>
-
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!--====================================================================================================-->
-            <!--                                        Modal Body          -->
-            <!--==================================================================================================== -->
-
-            <div class="modal-body">
-
-                <div class="box-body">
-                    <form action="" method="post" >
-
-                        <!--                    ENTRY FOR CODE-->
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-code"></i></span>
-                                </div>
-                                <input type="text" class="form-control input-lg" name="newCode" placeholder="Add Code" required>
-                            </div>
-
-                        </div>
-
-                        <!--                    ENTRY FOR Descripton-->
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-product-hunt"></i></span>
-                                </div>
-                                <input type="text" class="form-control input-lg" name="newDescription" placeholder="Add Description" required>
-                            </div>
-
-                        </div>
-
-
-                        <!--                    Check category-->
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-th"></i></span>
-                                </div>
-                                <select class="form-control input-lg" name="newCategory">
-
-                                    <option value="">Select Category</option>
-                                    <option value="CONSTRUCTION EQUIPMENT">Adminastrator</option>
-                                    <option value="Drill">Special</option>
-                                    <option value="POWER GENERATORS">Seller</option>
-
-                                </select>
-                            </div>
-
-                        </div>
-
-                        <!--                    INPUT FOR STOCK-->
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-check"></i></span>
-                                </div>
-                                <input type="number" class="form-control input-lg" name="newStock" min="0" placeholder="Stock" required>
-                            </div>
-
-                        </div>
-
-
-                        <!-- INPUT BUYING PRICE -->
-                        <div class="form-group row">
-
-                            <div class="col-xs-6">
-
-                                <div class="input-group">
-
-                                    <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span>
-
-                                    <input type="number" class="form-control input-lg" name="newBuyingPrice" min="0" placeholder="Buying Price" required>
-
-                                </div>
-
-                            </div>
-
-                            <!-- INPUT SELLING PRICE -->
-                            <div class="col-xs-6">
-
-                                <div class="input-group">
-
-                                    <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
-
-                                    <input type="number" class="form-control input-lg" name="newSellingPrice" min="0" placeholder="Selling Price" required>
-
-                                </div>
-
-                                <br>
-
-                                <!-- CHECKBOX PERCENTAGE -->
-                                <div class="col-xs-6">
-
-                                    <div class="form-group">
-
-                                        <label>
-
-                                            <input type="checkbox" class="minimal percentage" checked>
-
-                                            Use percentage
-
-                                        </label>
-
-                                    </div>
-
-                                </div>
-
-                                <!-- INPUT PERCENTAGE -->
-                                <div class="col-xs-6" style="padding:0">
-
-                                    <div class="input-group">
-
-                                        <input type="number" class="form-control input-lg newPercentage" min="0" value="40" required>
-
-                                        <span class="input-group-addon"><i class="fa fa-percent"></i></span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!--                    ENTRY FOR PICTURE-->
-
-                        <div class="form-group">
-
-                            <div class="panel">Upload Image</div>
-
-                            <input type="file" id="newProductImage " name="newProductImage">
-
-                            <p class="help-block">Maximum picture size 2MB </p>
-
-                            <img src="dist/img/user/avatar.png" class="img-thumbnail" width="100px">
-
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary" name="saveProducts">Save Products</button>
-                        </div>
-
-                    </form>
-
-
-
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-product-hunt"></i></span>
+                    </div>
+                    <input type="text" class="form-control input-lg" name="productDescription" placeholder="Prouduct Description" required>
                 </div>
 
             </div>
 
 
-        </div>
+            <!--                    ENTRY FOR CODE-->
+
+            <div class="form-group">
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-code"></i></span>
+                    </div>
+                    <input type="text" class="form-control input-lg" name="productCode" placeholder="Add Code" required>
+                </div>
+
+            </div>
+
+            <!--                    Check category-->
+
+            <div class="form-group">
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-th"></i></span>
+                    </div>
+                    <select class="form-control input-lg" name="productCategory" id="productCategoryfse" required>
+
+                        <option value="" >Select Category</option>
+
+                        <?php
+
+                        include_once "connection.php";
+
+                        $query = "SELECT * FROM category";
+
+
+
+                        $result = mysqli_query($conn, $query);
+
+                        while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <option value="<?= $row['id'] ?>"><?= $row['category'] ?>
+
+                            <?php
+
+                            }
+
+
+                            ?>
+
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!--                    INPUT FOR STOCK-->
+
+            <div class="form-group">
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-check"></i></span>
+                    </div>
+                    <input type="number"  class="form-control input-lg" name="productStock" min="0"  placeholder="Stock" required>
+                </div>
+
+            </div>
+
+            <!--                    INPUT FOR BUYING PRICE -->
+
+            <div class="form-group">
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-check"></i></span>
+                    </div>
+                    <input type="number" class="form-control input-lg" name="buyingPrice" min="0" step="any" placeholder="Buying Price" required>   <!-- STEP ANY FOR DECIMAL-->
+                </div>
+
+            </div>
+
+            <!--                    INPUT FOR SELLING PRICE-->
+
+            <div class="form-group">
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-check"></i></span>
+                    </div>
+                    <input type="number" class="form-control input-lg" name="sellingPrice" min="0" step="any" placeholder="Selling Price" required>   <!-- STEP ANY FOR DECIMAL-->
+                </div>
+
+            </div>
+
+
+            <!--                                        ENTRY FOR PICTURE-->
+
+            <div class="form-group">
+
+                <div class="panel">Upload Image</div>
+
+                <input type="file" class="newImage" name="newImage">
+
+                <p class="help-block">Maximum picture size 2MB </p>
+
+                <img src="dist/img/user/avatar.png" class="img-thumbnail preview" width="100px">
+
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" name="saveProducts">Save Products</button>
+            </div>
+
+        </form>
+
+
 
     </div>
+
 </div>
-
-
-
-
-
-
-
-<!--====================================================================================================-->
-<!--                                        Modal Add User End             -->
-<!--==================================================================================================== -->
-
-
-
-
-
-<?php
-include "footer.php";
-?>
-
-
-
