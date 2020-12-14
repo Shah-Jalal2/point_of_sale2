@@ -20,9 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/deleteProduct.controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/updateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/updateProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/products/639/174.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/userUpdate.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userUpdate.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/zamil/483.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/zamil/521.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/zamil/559.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/zamil/606.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/users/zamil/639.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +102,7 @@
       <workItem from="1607754373752" duration="9316000" />
       <workItem from="1607786708917" duration="12307000" />
       <workItem from="1607837804814" duration="9758000" />
+      <workItem from="1607924023728" duration="2456000" />
     </task>
     <servers />
   </component>

@@ -32,8 +32,21 @@ if (isset($_POST['updateProduct'])) {
 //            unlink($_POST['currentPicture']);
 //        }
 
-        if(file_exists($directori)) {
-            unlink($_POST[$directori]);
+
+//        if(!empty($_POST["currentImage"]) && $_POST["currentImage"] != "views/img/products/default/anonymous.png"){
+
+//            unlink($_POST["currentImage"]);
+//
+//        }else{
+//
+//            mkdir($folder, 0755);
+//
+//        }
+
+
+
+        if(!empty($_POST['currentPicture'])) {
+            unlink($_POST['currentPicture']);
         }
 
         else{

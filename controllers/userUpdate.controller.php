@@ -27,13 +27,12 @@ if (isset($_POST['updatetUser'])) {
 
         $current_directori = "dist/img/users/" . $_POST["currentPicture"];
 
-//        if(!empty($_POST['currentPicture'])) {
+        if(!empty("dist/img/users/")) {
 //            unlink($_POST['currentPicture']);
-//        }
+            unlink("dist/img/users/" . $_POST["currentPicture"]);
 
-        if(file_exists($directori)) {
-            unlink($_POST[$directori]);
         }
+
 
         else{
             mkdir($directori, 0755);
