@@ -87,7 +87,7 @@ include "header.php";
 
                                 <button class="btn btn-warning" data-toggle="modal" data-target="#editClientModal-<?= $row['id'] ?>"><i class="fa fa-pen"></i></button>
 
-                                <a href="controllers/categoryDelete.controller.php?category_delete=<?= base64_encode($row['id']) ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete')"><i class="fa fa-times"></i></a>
+                                <a href="controllers/deleteClient.controller.php?client_delete=<?= base64_encode($row['id']) ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete')"><i class="fa fa-times"></i></a>
 
                             </div>
 
@@ -385,7 +385,7 @@ while ($row = mysqli_fetch_assoc($result)){
         </div>
 
     </div>
-</div>
+
 
 <?php
 }
