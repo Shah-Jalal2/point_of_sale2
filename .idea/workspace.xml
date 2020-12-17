@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/deleteClient.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/clients.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create-sales.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sales.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,8 +58,8 @@
       <recent name="C:\xampp\htdocs\php_project\research\POS2\dist\js\pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\php_project\research\POS4\controllers" />
       <recent name="C:\xampp\htdocs\php_project\research\POS4" />
+      <recent name="C:\xampp\htdocs\php_project\research\POS4\controllers" />
       <recent name="C:\xampp\htdocs\php_project\research\POS2" />
     </key>
   </component>
@@ -97,7 +98,7 @@
       <workItem from="1607837804814" duration="9758000" />
       <workItem from="1607924023728" duration="4100000" />
       <workItem from="1608043095560" duration="762000" />
-      <workItem from="1608181704787" duration="3890000" />
+      <workItem from="1608181704787" duration="9237000" />
     </task>
     <servers />
   </component>
