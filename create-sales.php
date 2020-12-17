@@ -54,9 +54,9 @@ include "header.php";
 
                                         </div>
 
-                                    <!--====================================================================================================-->
+                                    <!--=============================================================-->
                                     <!--               Seller Input          -->
-                                    <!--==================================================================================================== -->
+                                    <!--============================================================= -->
 
                                         <div class="form-group">
 
@@ -65,13 +65,14 @@ include "header.php";
                                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                                 </div>
                                                 <input type="text" class="form-control" id="newSale" name="newSale" value="120444" readonly>
+
                                             </div>
 
                                         </div>
 
-                                        <!--====================================================================================================-->
+                                        <!--==========================================================-->
                                         <!--               Customer Input          -->
-                                        <!--==================================================================================================== -->
+                                        <!--========================================================== -->
 
                                         <div class="form-group">
 
@@ -92,6 +93,52 @@ include "header.php";
 
                                         </div>
 
+                                        <!--=================================================================== -->
+                                        <!--                     Input to add Product        -->
+                                        <!--=================================================================== -->
+
+
+                                        <div class="form-group row newProduct">
+
+<!--                                            DESCRIPTION OF THE PRODUCT-->
+
+                                            <div class="col-xs-6" style="padding-right: 0px">
+
+                                                <div class="input-group">
+
+                                                    <div>
+                                                        <span class="input-group-append"><button type="button" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+
+                                                        <input type="text" class="form-control" id="addProduct" name="addProduct" placeholder="Product Description" required>
+
+                                                        </span></div>
+                                                    </div>
+
+                                            </div>
+
+<!--                                            PRODUCT QUANTITY-->
+
+                                            <div class="col-3">
+
+                                                <input type="number" class="form-control" id="newProduct" name="newProduct" min="1" placeholder="0" required>
+
+                                            </div>
+
+<!--                                            PRODUCT PRICE-->
+
+                                            <div class="col-xs-6" style="padding-right: 0px">
+
+                                                <div class="input-group-append">
+
+                                                    <div>
+                                                        <input type="number" min="1" class="form-control" id="newPriceProduct" name="newPriceProduct" placeholder="000000" required>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
 
                                 </div>
 
