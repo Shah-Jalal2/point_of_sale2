@@ -94,7 +94,7 @@ include "header.php";
 
                     <div class="col-md-12">
 
-                        <table class="table  table-striped table-responsive-sm ">      <!-- dt resposinve is from datatable-->
+                        <table class="table  table-striped table-responsive-sm" id="productTable">      <!-- dt resposinve is from datatable-->
 
                             <thead>
                             <tr>
@@ -266,7 +266,7 @@ include "header.php";
                 </div>
 
         </div>
-<!--                <hr>-->
+
                 <div class="form-group" align="center">
                     <button type="submit" class="btn btn-info" name="saveOrder" value="save order">Save Order</button>
                 </div>

@@ -12,6 +12,7 @@
 <script src="dist/js/script.js"></script>
 <script src="dist/js/users.js"></script>
 <script src="dist/js/products.js"></script>
+<script src="dist/js/order.js"></script>
 
 </body>
 </html>

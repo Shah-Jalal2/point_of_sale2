@@ -73,6 +73,15 @@
             </li>
 
             <li class="nav-item has-treeview">
+                <a href="createOrder.php" class="nav-link">
+                    <i class="fas fa-list nav-icon"></i>
+                    <p>
+                        Create Order
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item has-treeview">
                 <a href="clients.php" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>
