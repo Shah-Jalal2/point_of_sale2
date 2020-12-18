@@ -131,14 +131,141 @@ include "header.php";
                                                 <div class="input-group-append">
 
                                                     <div>
+<!--                                                        <span class="input-group-append">-->
                                                         <input type="number" min="1" class="form-control" id="newPriceProduct" name="newPriceProduct" placeholder="000000" required>
-
-
+<!--                                                            <span class="input-group-text"><i class="fas fa-usd"><p>&dollar;</p></i></span></span>-->
                                                 </div>
 
                                             </div>
 
                                         </div>
+
+
+<!--                                            <button type="button" class="btn btn-default d-lg-none d-xl-block">Add Product</button>-->
+
+                                            <div class="row">
+
+                                                <hr>
+
+                                                <!--=================================================================== -->
+                                                <!--                     Tax and Total Price        -->
+                                                <!--=================================================================== -->
+
+                                                <div class="col-sm-8 pull-right">
+
+                                                    <table class="table">
+
+                                                        <thead>
+
+                                                        <tr>
+                                                            <th>Tax</th>
+                                                            <th>Total</th>
+                                                        </tr>
+
+                                                        </thead>
+
+                                                        <tbody>
+
+                                                        <tr>
+
+                                                            <td style="width: 50%">
+
+                                                                <div class="input-group">
+
+                                                                    <input type="number" class="form-control" min="0" id="taxPrice" name="taxPrice"
+                                                                    placeholder="0" required>
+
+
+
+                                                                </div>
+
+                                                            </td>
+
+                                                            <td style="width: 50%">
+
+                                                                <div class="input-group">
+
+                                                                    <input type="number" class="form-control" min="0" id="newTotalPrice" name="newTotalPrice"
+                                                                           placeholder="0000" readonly required>
+
+                                                                    <span class="input-group-append"><i><p>&dollar;</p></i></span>
+<!--                                                                    <span class="input-group-append"><i class=""></i></span>-->
+
+                                                                </div>
+
+                                                            </td>
+
+                                                        </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+
+
+                                                </div>
+
+
+                                            </div>
+
+                                </div>
+                                        <hr>
+
+                                        <!--=================================================================== -->
+                                        <!--                     Payment Method        -->
+                                        <!--=================================================================== -->
+
+                                        <div class="form-group row">
+
+                                            <div class="col-6" style="padding-left: 0px">
+
+                                                <div class="input-group">
+
+                                                    <select class="form-control" name="methodPayent" id="methodPayent" required>
+
+                                                        <option value="">Select</option>
+                                                        <option value="">Cash</option>
+                                                        <option value="">Credi Card</option>
+                                                        <option value="">Debit Card</option>
+
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-6" style="padding-right: 0px">
+
+                                                <div class="input-group">
+
+<!--                                                    <div>-->
+
+<!--                                                        <span class="input-group-prepend"><input type="text" class="form-control" id="newTransactionCode" name="newTransactionCode"-->
+<!--                                                                                                 placeholder="Transaction Code" required>-->
+<!---->
+<!--                                                        <span class="input-group-append"><i class="fa fa-lock"></i></span></span>-->
+
+                                                    <div >
+                                                        <input type="text" class="form-control" id="newTransactionCode" name="newTransactionCode" placeholder="Transaction Code" required>
+                                                    </div>
+
+                                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                                    </div>
+
+
+
+<!--                                                    </div>-->
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                <div class="small-box-footer">
+
+                                    <button type="button" class="btn btn-primary" name="saveSale">Save Sale</button>
 
                                 </div>
 
@@ -146,12 +273,61 @@ include "header.php";
 
                         </div>
 
+
                 </div>
 
             </div>
 
             <div class="col-lg-7 hidden-md hidden-sm hidden-xs">
 
+                <div class="card card-warning">
+                    <div class="card-header">
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <div class="box">
+
+                            <table class="table table-bordered table-striped table-responsive-sm mydatatable">      <!-- dt resposinve is from datatable-->
+
+                                <thead>
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>Image</th>
+                                    <th>Code</th>
+                                    <th>Description</th>
+                                    <th>Stock</th>
+                                    <th>Actionins</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td><img src="dist/img/n/aspirador-industrial.png" class="img-thumbnail" width="50px"></td>
+                                    <td>00123</td>
+                                    <td>lorem ipsam dolor sit</td>
+                                    <td>20</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-primary">Add</button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+
+                            </table>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
 
 
             </div>
@@ -273,8 +449,8 @@ include "header.php";
                     include_once "controllers/addClientController.php";
                     ?>
 
-                </div>
 
+                </div>
             </div>
 
 
