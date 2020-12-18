@@ -2,474 +2,113 @@
 include "header.php";
 ?>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h2>Manage Products</h2>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i>Homepage</a></li>
-                            <li class="breadcrumb-item active">Manage Products</li>
-                        </ol>
-                    </div>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h2>Create Order</h2>
                 </div>
-            </div><!-- /.container-fluid -->
-        </section>
-
-
-
-
-
-        <!-- Main content -->
-        <section class="content">
-
-            <div class="card">
-                <div class="card-header">
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalAddProduct">
-                        Add User
-                    </button>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i>Homepage</a></li>
+                        <li class="breadcrumb-item active">Create Order</li>
+                    </ol>
                 </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
 
 
-                <div class="card-body">
 
-                    <div class="box">
+    <!-- Main content -->
+    <section class="content">
 
-                        <table class="table table-bordered table-striped table-responsive-sm mydatatable">      <!-- dt resposinve is from datatable-->
+        <!-- Default box -->
+        <div class="card">
 
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Image</th>
-                                <th>Code</th>
-                                <th>description</th>
-                                <th>Category</th>
-                                <th>Stock</th>
-                                <th>Buying Price</th>
-                                <th>Sell Price</th>
-                                <th>Date</th>
-                                <th>Action</th>
-                            </tr>
-                            </thead>
+            <form action="" method="post" name="">
 
-                            <tbody>
-
-                            <?php
-
-                            include "connection.php";
-
-//                                                    $query = "SELECT * FROM products";
-                            $query = "SELECT products.code, products.id, products.image, products.buying_price, products.selling_price, products.date, products.stock, products.description, category.category FROM products
-                                    LEFT JOIN category ON category.id = products.id_category ORDER BY products.id DESC";
-                            $result = mysqli_query($conn, $query);
-
-//                            $count = 0;
-//
-//                            $query = "SELECT * FROM products";
-//                            $result = mysqli_query($conn, $query);
-
-                            $count = 0;
-
-
-                            while ($row = mysqli_fetch_assoc($result)){
-                                $count++;
-                                ?>
-
-                                <tr>
-                                    <td><?= $count ?></td>
-                                    <td><img src="<?= $row['image'] ?>" alt="" class="img-thumbnail" width="50px"></td>
-                                    <td><?= $row['code'] ?></td>
-                                    <td><?= $row['description'] ?></td>
-                                    <td><?= $row['category'] ?></td>
-                                    <td><?= $row['stock'] ?></td>
-                                    <td><?= $row['buying_price'] ?></td>
-                                    <td><?= $row['selling_price'] ?></td>
-                                    <!--                                <td>--><?//= $row['sales'] ?><!--</td>-->
-                                    <td><?= $row['date'] ?></td>
-                                    <td>
-
-                                        <div class="btn-group">
-
-                                            <button class="btn btn-warning btnEditUser" data-toggle="modal" data-target="#modalEditUser-<?= $row['id'] ?>"><i class="fa fa-pen"></i></button>
-
-
-                                            <!--                                        <button class="btn btn-danger" ><i class="fa fa-times"></i></button>-->
-                                            <a href="controllers/deleteUser.controller.php?user_delete=<?= base64_encode($row['id']) ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete')"><i class="fa fa-times"></i></a>
-
-
-                                        </div>
-
-
-                                    </td>
-                                </tr>
-
-                                <?php
-                            }
-                            ?>
-
-
-                            </tbody>
-
-                        </table>
-
-
-                    </div>
-
-                </div>
-
+            <div class="card-header">
             </div>
 
-            <!-- /.card -->
-
-        </section>
-        <!-- /.content -->
-
-    </div>
-    <!-- /.content-wrapper -->
-
-
-
-
-
-<?php
-
-
-include "connection.php";
-
-$query = "SELECT * FROM products";
-
-//$query = "SELECT products.code, products.id, products.image, products.buying_price, products.selling_price, products.date, products.stock, products.description, category.category FROM products
-//                                    LEFT JOIN category ON category.id = products.id_category ORDER BY products.id DESC";
-
-$result = mysqli_query($conn, $query);
-
-
-while ($row = mysqli_fetch_assoc($result)){
-    $id = $row['id'];
-    $query = "SELECT * FROM products WHERE `id` = '$id'";
-    $p_category = $row['id_category'];
-
-    $user_info = mysqli_query($conn, $query);
-    $editUserInfo = mysqli_fetch_assoc($user_info);
-    ?>
-
-
-    <!-- Modal -->
-    <div id="modalEditUser-<?= $row['id'] ?>" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-
-                <!--            <form  method="post" action="" enctype="multipart/form-data"></form>-->
-
-                <!--====================================================================================================-->
-                <!--                                        Modal Header            -->
-                <!--==================================================================================================== -->
-
-                <div class="modal-header" style="background: #3c8dbc; color: white;">
-
-                    <h4 class="modal-title">Edit User</h4>
-
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!--====================================================================================================-->
-                <!--                                        Modal Body          -->
-                <!--==================================================================================================== -->
-
-                <div class="modal-body">
-
-                    <div class="box-body">
-
-                        <form action="" method="post" enctype="multipart/form-data">
-
-
-                            <!--                    ENTRY FOR NAME-->
-
-                            <div class="form-group">
-
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control input-lg" name="editName" value="<?= $p_category ?>" required>
-                                    <input type="hidden" class="form-control" name="id"  value="<?= $editUserInfo['id'] ?>" required>    <!--HIDDEN ID PASS-->
-                                </div>
-
-                            </div>
-
-                            <!--                    ENTRY FOR USER-->
-
-                            <div class="form-group">
-
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control input-lg" name="editUser" value="<?= $editUserInfo['user'] ?>" required>
-                                </div>
-
-                            </div>
-
-                            <!--                    ENTRY FOR PASSWORD-->
-
-                            <div class="form-group">
-
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                                    </div>
-                                    <input type="password" class="form-control input-lg" name="editPassword" placeholder="Write a New Password" required>
-                                </div>
-
-                            </div>
-
-                            <!--                    ENTRY FOR SELECT PROFILE-->
-
-                            <div class="form-group">
-
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-users"></i></span>
-                                    </div>
-                                    <select class="form-control input-lg" name="editProfile" >
-
-                                        <?php
-
-                                        include_once "connection.php";
-
-                                        $sql2 = "SELECT * FROM category where id = '$p_category'";
-                                        $res2 = mysqli_query($conn, $sql2);
-                                        $row2 = mysqli_fetch_assoc($res2);
-                                        echo "<option value='{$row['id']}'>{$row2['category']}</option>";
-
-                                        $sql3 = "SELECT * FROM category ";
-                                        $res3 = mysqli_query($conn, $sql3);
-                                        while ($row3 = mysqli_fetch_assoc($res3)) {
-
-//                                            if ($row2['category'] == $row3['category']) {
-//                                                $selected = "";
-//                                            }
-
-                                            echo "<option value='{$row3['id']}'>{$row3['category']}</option>";
-
-
-
-
-                                        }
-
-                                        ?>
-
-
-
-                                    </select>
-                                </div>
-
-                            </div>
-
-                            <!--                    ENTRY FOR PICTURE-->
-
-                            <div class="form-group">
-
-                                <div class="panel">Upload Picture</div>
-
-                                <input type="file" class="newPicture" name="editPicture">
-
-                                <p class="help-block">Maximum picture size 200MB </p>
-
-                                <img src="<?= $editUserInfo['picture'] ?>" class="img-thumbnail preview" width="100px">
-                                <input type="hidden" name="currentPicture" id="currentPicture">
-
-                            </div>
-
-
-
-
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary" name="updatetUser">Update User</button>
-                            </div>
-
-                        </form>
+                <!--=======================================================================-->
+                <!--                     This is for customer and date           -->
+                <!--======================================================================= -->
+
+            <div class="card-body">
+
+<!--                <div class="col-md-6">-->
+<!---->
+<!--                    <div class="form-group">-->
+<!--                        <label for="">Customer Name</label>-->
+<!--                        <input type="text" class="form-control" id="txtCustomer" placeholder="Enter Customer Name" required>-->
+<!--                    </div>-->
+<!---->
+<!--                </div>-->
+<!---->
+<!--                <div class="col-md-6">-->
+<!---->
+<!--                    <h2>Date</h2>-->
+<!---->
+<!--                </div>-->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Customer Name</label>
+                            <input type="text" class="form-control" id="txtCustomer" placeholder="Enter Customer Name" required>
+                        </div>
                     </div>
 
+
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <!-- Date -->
+                            <div class="form-group">
+                                <label>Date:</label>
+                                <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
 
 
             </div>
+
+                <!--=======================================================================-->
+                <!--                     This is for table           -->
+                <!--======================================================================= -->
+
+
+                <div class="card-body"></div>
+
+                <!--=======================================================================-->
+                <!--                     This is for table           -->
+                <!--======================================================================= -->
+
+            <div class="card-body"></div>
+
         </div>
-    </div>
 
-    <?php
+        </form>
 
-}
+    </section>
 
-
-//<!--====================================================================================================-->
-//            <!--                                        Update User          --
-//--==================================================================================================== -->
-
-include_once 'controllers/userUpdate.controller.php';
-
-?>
-
-
-
-
+</div>
 
 
 <?php
 include "footer.php";
 ?>
-
-
-
-
-
-
-
-<div class="modal-body">
-
-    <div class="box-body">
-        <form action="" method="post" enctype="multipart/form-data">
-
-
-
-            <!--                    ENTRY FOR Descripton-->
-
-            <div class="form-group">
-
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-product-hunt"></i></span>
-                    </div>
-                    <input type="text" class="form-control input-lg" name="productDescription" placeholder="Prouduct Description" required>
-                </div>
-
-            </div>
-
-
-            <!--                    ENTRY FOR CODE-->
-
-            <div class="form-group">
-
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-code"></i></span>
-                    </div>
-                    <input type="text" class="form-control input-lg" name="productCode" placeholder="Add Code" required>
-                </div>
-
-            </div>
-
-            <!--                    Check category-->
-
-            <div class="form-group">
-
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-th"></i></span>
-                    </div>
-                    <select class="form-control input-lg" name="productCategory" id="productCategoryfse" required>
-
-                        <option value="" >Select Category</option>
-
-                        <?php
-
-                        include_once "connection.php";
-
-                        $query = "SELECT * FROM category";
-
-
-
-                        $result = mysqli_query($conn, $query);
-
-                        while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                        <option value="<?= $row['id'] ?>"><?= $row['category'] ?>
-
-                            <?php
-
-                            }
-
-
-                            ?>
-
-
-                    </select>
-
-                </div>
-
-            </div>
-
-            <!--                    INPUT FOR STOCK-->
-
-            <div class="form-group">
-
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-check"></i></span>
-                    </div>
-                    <input type="number"  class="form-control input-lg" name="productStock" min="0"  placeholder="Stock" required>
-                </div>
-
-            </div>
-
-            <!--                    INPUT FOR BUYING PRICE -->
-
-            <div class="form-group">
-
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-check"></i></span>
-                    </div>
-                    <input type="number" class="form-control input-lg" name="buyingPrice" min="0" step="any" placeholder="Buying Price" required>   <!-- STEP ANY FOR DECIMAL-->
-                </div>
-
-            </div>
-
-            <!--                    INPUT FOR SELLING PRICE-->
-
-            <div class="form-group">
-
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-check"></i></span>
-                    </div>
-                    <input type="number" class="form-control input-lg" name="sellingPrice" min="0" step="any" placeholder="Selling Price" required>   <!-- STEP ANY FOR DECIMAL-->
-                </div>
-
-            </div>
-
-
-            <!--                                        ENTRY FOR PICTURE-->
-
-            <div class="form-group">
-
-                <div class="panel">Upload Image</div>
-
-                <input type="file" class="newImage" name="newImage">
-
-                <p class="help-block">Maximum picture size 2MB </p>
-
-                <img src="dist/img/user/avatar.png" class="img-thumbnail preview" width="100px">
-
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary" name="saveProducts">Save Products</button>
-            </div>
-
-        </form>
-
-
-
-    </div>
-
-</div>
+c

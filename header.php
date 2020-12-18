@@ -40,6 +40,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+
+    <!-- date-range-picker -->
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
@@ -55,6 +61,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+
+
 
     <!-- SweetAlert -->
     <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>

@@ -271,6 +271,10 @@ include "header.php";
 
                             </form>
 
+                            <?php
+                                include_once "controllers/testController.php";
+                            ?>
+
                         </div>
 
 
