@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/testController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pos.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create-sales.php" beforeDir="false" afterPath="$PROJECT_DIR$/create-sales.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +100,7 @@
       <workItem from="1608181704787" duration="9841000" />
       <workItem from="1608212283997" duration="7514000" />
       <workItem from="1608267328289" duration="5697000" />
-      <workItem from="1608303089986" duration="2996000" />
+      <workItem from="1608303089986" duration="8461000" />
     </task>
     <servers />
   </component>
@@ -148,10 +144,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="1294" height="737" key="dock-window-1/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606637196838" />
-    <state x="-1304" y="240" key="run.anything.popup" timestamp="1608214260113">
+    <state x="-1304" y="240" key="run.anything.popup" timestamp="1608307080242">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1304" y="240" key="run.anything.popup/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1608214260113" />
+    <state x="-1304" y="240" key="run.anything.popup/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1608307080242" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
