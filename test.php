@@ -2,6 +2,31 @@
 include "header.php";
 ?>
 
+<?php
+
+//    include_once "connection.php";
+//
+//
+//       function fillProduct($pdo) {
+//
+//        $output = '';
+//
+//        $query = "SELECT * FROM `products` ORDER BY `description` ASC";
+//
+//        $result = mysqli_query($conn, $query);
+//
+//        while($row = mysqli_fetch_assoc($result)) {
+
+//            $output = '<option value="'.$row["id"].'">'.$row["description"].'</option>';
+//
+//        }
+//
+//        return $output;
+//
+//    }
+//
+//?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -278,7 +303,48 @@ include "header.php";
 </div>
 
 
+<script>
+
+    $(document).ready(function () {
+
+        $(document).on('click', '.btnAdd', function (){
+
+            var html='';
+            html+='<tr>';
+
+            html+='<td><input type="hidden" class="form-control productName" name="productName[]" readonly></td>';
+
+            html+='<td><select class="form-control productId" name="productId[]"><option value="">Select</option></select></td>';
+
+            html+='<td><input type="number" class="form-control productStock" name="productStock[]" readonly></td>';
+
+            html+='<td><input type="number" class="form-control productPrice" name="productId[]" readonly></td>';
+
+            html+='<td><input type="number" class="form-control productQty" name="productQty[]" ></td>';
+
+            html+='<td><input type="number" class="form-control productTotal" name="productTotal[]" readonly></td>';
+
+            html+='<td><button type="button" name="remove" class="btn btn-danger btnRemove"><span class="fa fa-times"></span></button></td>';
+
+            $('#productTable').append(html);
+
+        })
+
+
+
+        $(document).on('click', '.btnRemove', function (){
+
+            $(this).closest('tr').remove();
+
+        })
+
+
+    });
+
+
+    }
+
+
 <?php
 include "footer.php";
 ?>
-c

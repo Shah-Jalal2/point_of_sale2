@@ -13,6 +13,7 @@
 <script src="dist/js/users.js"></script>
 <script src="dist/js/products.js"></script>
 <script src="dist/js/order.js"></script>
+<script src="dist/js/sales.js"></script>
 
 </body>
 </html>

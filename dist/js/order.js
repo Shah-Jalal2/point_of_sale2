@@ -10,7 +10,7 @@ $(document).ready(function () {
         html+='<tr>';
         html+='<td><input type="hidden" class="form-control productName" name="productName[]" readonly></td>';
 
-        html+='<td><select class="form-control productId" name="productId[]"><option value="">Select</option></select></td>';
+        html+='<td><select class="form-control productId" name="productId[]"><option value="">Select</option> <?= fillProduct($pName) ?> </select></td>';
 
         html+='<td><input type="number" class="form-control productStock" name="productStock[]" readonly></td>';
 
@@ -31,7 +31,7 @@ $(document).ready(function () {
     //  <!--======================================================================= -->
 
 
-                                         $(document).on('click', '.btnRemove', function (){
+    $(document).on('click', '.btnRemove', function (){
 
         $(this).closest('tr').remove();
 
