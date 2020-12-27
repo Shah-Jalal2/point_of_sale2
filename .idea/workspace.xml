@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60d29d3-16cb-4665-9c06-95e7370db9af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ajax/datatable-sales.ajax.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/js/sales.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +101,7 @@
       <workItem from="1608212283997" duration="7514000" />
       <workItem from="1608267328289" duration="5697000" />
       <workItem from="1608303089986" duration="11792000" />
-      <workItem from="1608352966131" duration="9396000" />
+      <workItem from="1608352966131" duration="11438000" />
     </task>
     <servers />
   </component>

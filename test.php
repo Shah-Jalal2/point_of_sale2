@@ -4,28 +4,38 @@ include "header.php";
 
 <?php
 
-//    include_once "connection.php";
-//
-//
-//       function fillProduct($pdo) {
-//
-//        $output = '';
-//
-//        $query = "SELECT * FROM `products` ORDER BY `description` ASC";
-//
-//        $result = mysqli_query($conn, $query);
-//
-//        while($row = mysqli_fetch_assoc($result)) {
 
-//            $output = '<option value="'.$row["id"].'">'.$row["description"].'</option>';
-//
-//        }
-//
-//        return $output;
-//
-//    }
-//
-//?>
+
+    class Product{
+
+        function fillProduct() {
+
+            include_once "connection.php";
+
+            $output = '';
+
+            $query = "SELECT * FROM `products` ORDER BY `description` ASC";
+
+            $result = mysqli_query($conn, $query);
+
+            while($row = mysqli_fetch_assoc($result)) {
+
+                $output = '<option value="'.$row["id"].'">'.$row["description"].'</option>';
+
+//                $output = print_r($row['description']);
+
+            }
+
+            return  ;
+
+        }
+
+
+
+    }
+
+
+?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -46,7 +56,14 @@ include "header.php";
         </div><!-- /.container-fluid -->
     </section>
 
+    <?php
 
+        $obj = new Product;
+
+        $obj->fillProduct();
+
+
+    ?>
 
     <!-- Main content -->
     <section class="content">
@@ -302,6 +319,11 @@ include "header.php";
 
 </div>
 
+<?php
+
+$obj = new Product;
+
+?>
 
 <script>
 
@@ -314,7 +336,7 @@ include "header.php";
 
             html+='<td><input type="hidden" class="form-control productName" name="productName[]" readonly></td>';
 
-            html+='<td><select class="form-control productId" name="productId[]"><option value="">Select</option></select></td>';
+            html+='<td><select class="form-control productId" name="productId[]"><option value="">Select</option><?=  $obj->fillProduct() ?></select></td>';
 
             html+='<td><input type="number" class="form-control productStock" name="productStock[]" readonly></td>';
 
@@ -343,6 +365,10 @@ include "header.php";
 
 
     }
+
+    <?php
+
+    ?>
 
 
 <?php
